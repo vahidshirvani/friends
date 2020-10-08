@@ -45,7 +45,7 @@ public class Friends {
         String b = iterator.next();
 
         return friendsOfEachPerson.get(a).contains(b) ?
-                e.getValue().stream().map(c -> asSet(a, b, c)).collect(toList()) :
+                e.getValue().stream().map(c -> Set.of(a, b, c)).collect(toList()) :
                 Collections.emptyList();
     }
 
@@ -138,7 +138,7 @@ public class Friends {
         // Current case
         List<Set<String>> tuples = people
                 .stream()
-                .map(p -> asSet(person, p))
+                .map(p -> Set.of(person, p))
                 .collect(toList());
 
         // N - 1 case
@@ -184,18 +184,5 @@ public class Friends {
                 .of(a, b)
                 .flatMap(Collection::stream)
                 .collect(toList());
-    }
-
-    /**
-     * A helper function similar to {@link Arrays#asList}.
-     * Sets are unordered collection without duplicates.
-     *
-     * @param <T> the class of the objects in the array
-     * @param a the array by which the set will be backed
-     * @return a set view of the specified array
-     */
-    @SafeVarargs
-    static <T> Set<T> asSet(T... a) {
-        return Stream.of(a).collect(toSet());
     }
 }
