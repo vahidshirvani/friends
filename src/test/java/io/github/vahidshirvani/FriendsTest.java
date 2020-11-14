@@ -1,4 +1,4 @@
-package com.vahidshirvani;
+package io.github.vahidshirvani;
 
 import org.junit.Test;
 
@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import static com.vahidshirvani.Friends.*;
+import static io.github.vahidshirvani.Friends.*;
 import static java.util.Collections.singletonList;
 import static java.util.Map.Entry.comparingByKey;
 import static java.util.Map.entry;

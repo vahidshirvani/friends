@@ -1,4 +1,4 @@
-package com.vahidshirvani;
+package io.github.vahidshirvani;
 
 public class Connection {
 

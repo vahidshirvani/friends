@@ -1,4 +1,4 @@
-package com.vahidshirvani;
+package io.github.vahidshirvani;
 
 import java.util.*;
 import java.util.Map.Entry;
